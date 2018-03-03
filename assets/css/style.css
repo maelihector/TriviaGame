@@ -27,10 +27,16 @@ body {
     letter-spacing: 10px;
 }
 
-.quiz, .start, .timer-box {
+.quiz,
+.start,
+.timer-box 
+.timesUp
+.sorry
+.congrats
+{
     padding: 10px;
     margin: 20px;
-    background-color: #310909d9;
+    background-color: #31090996;
 }
 
 h1,
@@ -39,7 +45,7 @@ h2 {
 }
 
 p {
-    font-size: 38px;
+    font-size: 35px;
     border-bottom: 1px solid #dddddd59;
     padding: 25px;
 }
@@ -51,7 +57,6 @@ button {
     color: #ffffff;
     font-family: 'Wire One';
     font-size: 20px;
-
 }
 
 button:hover {

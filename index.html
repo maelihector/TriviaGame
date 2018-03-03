@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 
+
 <body>
     <audio id="myAudio">
         <source src="./assets/mp3/X-FilesTheme.mp3" type="audio/mpeg">
@@ -24,11 +25,27 @@
             <button id="start">Start Quiz</button>
             <h2>Good Luck!</h2>
         </div>
-        
-        
-        <div class="quiz hidden" id="parent">
+        <!-- The next three divs are ones that will show depending on which choice the user clicks on -->
+        <div class="congrats">
+            <hr>
+            <h2>You got it right!</h2>
+            <hr>
+     
+        </div>
+        <div class="sorry">
+                <hr>
+                <h2>Wrong Answer!</h2>
+                <hr>
+        </div>
+        <div class="timesUp">
+                <hr>
+                <h2>Sorry, you ran out of time.</h2>
+                <hr>
+             </div>
+        <!-- End of choice divs  -->
+        <div class="quiz hidden parent" id="parent quiz">
             
-            <div class="answer timer-box endQuiz" id="answer timer">
+            <div class="answer timer-box endQuiz timer" id="answer timer">
                 <p>Timer box will show here</p>
             </div>
             
@@ -36,8 +53,10 @@
                 <p>Questions will go here</p>
             </div>
             
-            <div class="choices" id="choices rightChoice">
+            <div class="choices" id="answer wrongAnswers">
                 <p>P's will append here</p>
+                <div class="choice" id="wrongAnwer"></div>
+                <div class="choice" id="answer"></div>
             </div>
             
         </div>
