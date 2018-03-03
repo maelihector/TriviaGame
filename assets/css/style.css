@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/x-files1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrapper {
+    overflow: auto;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    font-family: 'Wire One', sans-serif;
+    font-variant-caps: all-petite-caps;
+    font-stretch: ultra-expanded;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    word-spacing: 7px;
+    letter-spacing: 10px;
+}
+
+.quiz {
+    margin: 20px;
+    background-color: #5c161675;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p {
+    font-size: 35px;
+    border-bottom: 1px solid #dddddd59;
+    padding: 25px;
+}
