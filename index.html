@@ -12,23 +12,37 @@
 </head>
 
 <body>
+    <audio id="myAudio">
+        <source src="./assets/mp3/X-FilesTheme.mp3" type="audio/mpeg">
+    </audio>
     <div class="wrapper">
         <h1>X-Files Trivia!</h1>
-    
-        <div class="quiz" id="quiz">
-
-            <div class="questions" id="questions">
-                <p>Questions will go here</p>
-            </div>
-          
-            <div class="choices" id="choices">
-                <p>Buttons will go here</p>
-            </div>
-            <div class="answer" id="answer timer-box">
+        <div class="start">
+            <h2>Do you want to play?</h2>
+            <p>There are 10 questions total. You have 10 seconds to answer each question.
+            </p>
+            <button id="start">Start Quiz</button>
+            <h2>Good Luck!</h2>
+        </div>
+        
+        
+        <div class="quiz hidden" id="parent">
+            
+            <div class="answer timer-box endQuiz" id="answer timer">
                 <p>Timer box will show here</p>
             </div>
-
+            
+            <div class="questions" id="question">
+                <p>Questions will go here</p>
+            </div>
+            
+            <div class="choices" id="choices rightChoice">
+                <p>P's will append here</p>
+            </div>
+            
         </div>
+        <button id="playAudio" type="button">Play Audio</button>
+        <button id="pauseAudio" type="button">Pause Audio</button>
     </div>
 
     <!-- jQuery -->
