@@ -5,7 +5,11 @@
 body {
     background-image: url('../images/x-files1.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
+}
+
+.hidden {
+    display: none;
 }
 
 .wrapper {
@@ -19,21 +23,38 @@ body {
     font-weight: 600;
     color: #ffffff;
     text-align: center;
-    word-spacing: 7px;
+    word-spacing: 5px;
     letter-spacing: 10px;
 }
 
-.quiz {
+.quiz, .start, .timer-box {
+    padding: 10px;
     margin: 20px;
-    background-color: #5c161675;
+    background-color: #310909d9;
 }
 
-h1 {
+h1,
+h2 {
     font-size: 48px;
 }
 
 p {
-    font-size: 35px;
+    font-size: 38px;
     border-bottom: 1px solid #dddddd59;
     padding: 25px;
+}
+
+button {
+    padding: 15px;
+    margin: 15px;
+    background-color: #1e1b1b;
+    color: #ffffff;
+    font-family: 'Wire One';
+    font-size: 20px;
+
+}
+
+button:hover {
+    color: rgb(134, 68, 68);
+    background-color: #180101;
 }
