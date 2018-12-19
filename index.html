@@ -13,60 +13,64 @@
 
 
 <body>
-    <audio id="myAudio">
+    <!-- X-Files Theme Song Audio  -->
+    <audio id="xFilesThemeSongAudio">
         <source src="./assets/mp3/X-FilesTheme.mp3" type="audio/mpeg">
     </audio>
+    <button id="playAudio" type="button">Play Audio</button>
+    <button id="pauseAudio" type="button">Pause Audio</button>
     <div class="wrapper">
+
+        <!-- Landing Page Div -->
         <h1>X-Files Trivia!</h1>
-        <div class="start">
+        <div class="startDiv">
             <h2>Do you want to play?</h2>
             <p>There are 10 questions total. You have 10 seconds to answer each question.
             </p>
-            <button id="start">Start Quiz</button>
+            <button id="startBtn">Start Quiz</button>
             <h2>Good Luck!</h2>
         </div>
+
+        <!-- Quiz Div will show once 'start' button is clicked. -->
+        <div class="quizDiv hidden" id="quiz">
+
+            <div class="rightAnswer timer-box endQuiz timer" id="rightAnswer timer">
+                <p>Timer box will show here</p>
+            </div>
+
+            <div class="question" id="question">
+                <p>Question will go here</p>
+            </div>
+
+            <div class="choices" id="answer choices">
+
+            </div>
+
+        </div>
         <!-- The next three divs are ones that will show depending on which choice the user clicks on -->
-        <div class="congrats">
+        <div class="congratsMessage">
             <hr>
             <h2>You got it right!</h2>
             <hr>
-     
+            <div class="gifBox" id="rightAnswerGif"></div>
         </div>
-        <div class="sorry">
-                <hr>
-                <h2>Wrong Answer!</h2>
-                <hr>
+        <div class="sorryMessage">
+            <hr>
+            <h2>Wrong Answer!</h2>
+            <hr>
+            <div class="gifBox" id="wrongAnswerGif"></div>
+
         </div>
-        <div class="timesUp">
-                <hr>
-                <h2>Sorry, you ran out of time.</h2>
-                <hr>
-             </div>
-        <!-- End of choice divs  -->
-        <div class="quiz hidden parent" id="parent quiz">
-            
-            <div class="answer timer-box endQuiz timer" id="answer timer">
-                <p>Timer box will show here</p>
-            </div>
-            
-            <div class="questions" id="question">
-                <p>Questions will go here</p>
-            </div>
-            
-            <div class="choices" id="answer wrongAnswers">
-                <p>P's will append here</p>
-                <div class="choice" id="wrongAnwer"></div>
-                <div class="choice" id="answer"></div>
-            </div>
-            
+        <div class="timesUpMessage">
+            <hr>
+            <h2>Sorry, you ran out of time.</h2>
+            <hr>
         </div>
-        <button id="playAudio" type="button">Play Audio</button>
-        <button id="pauseAudio" type="button">Pause Audio</button>
     </div>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Script -->
+    <!-- JavaScript -->
     <script src="assets/javascript/app.js"></script>
 </body>
 

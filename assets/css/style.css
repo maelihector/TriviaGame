@@ -27,12 +27,12 @@ body {
     letter-spacing: 10px;
 }
 
-.quiz,
-.start,
+.quizDiv,
+.startDiv,
 .timer-box 
-.timesUp
-.sorry
-.congrats
+.timesUpMessage
+.sorryMessage
+.congratsMessage
 {
     padding: 10px;
     margin: 20px;

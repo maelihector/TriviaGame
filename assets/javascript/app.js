@@ -1,172 +1,104 @@
 $(document).ready(() => {
 
-    var x = document.getElementById("myAudio");
-    // Gives players the option to play or pause the audio
-    $('#playAudio').on('click', () => {
-        x.play();
-
-    })
-
-    $('#pauseAudio').on('click', () => {
-        x.pause();
-
-    })
-    
-    var $question = $('.question');
-// Array of possible wrong answers. Three of these should be randomly selected and dumped randomly onto the choices div
-    var wrongAnswers = [
-        "Diana Bones",
-        "Cat Bolder",
-        "Vladimir Putin",
-        "Fatty Bolger",
-        "Temperence Bones",
-        "Seeley Booth",
-        "Ross Geller",
-        "Chandler Bing",
-        "Fuzzy Dunlop",
-        "Stringer Bell",
-        "Donald Trump",
-        "Sam Gamgee",
-        "Tom Bombadill",
-        "Kathy Reichs",
-        "Shawn Corey Carter",
-        "Agent Reyes",
-        "Hank Moody",
-        "Dwight Shrute",
-        "Oscar Martinez",
-        "Sean Bean",
-        "Ron Swanson",
-        "Rev. Graham Hess",
-        "Bill Clinton",
-        "Agent Bert Macklin",
-        "Agent Clarice Starling",
-        "Steve Harrington",
-        "Neil deGrasse Tyson",
-        "Hannibal Lector",
-        "Buffalo Bill",
-
-
-    ]
-
-    // A loop from the beginnng should have each question shown in the question div
-    // The correspongding answer should be dumped into on of the four (along with three random wrongAnswers) divs in the choices div
-    var questionObj = [{
+    // Trivia questions set
+    var triviaQuestions = [
+        {
             question: "Who created the X-Files?",
-            answer: "Chris Carter"
+            rightAnswer: "Chris Carter",
+            possibleAnswers: ["Bryan Fuller", "J.J. Abrams", "Chris Carter", "Neil deGrasse Tyson"],
+            image: '<iframe src="https://giphy.com/embed/RJKSRBczXJQ3e" width="480" height="354" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/chris-carter-david-duchovny-the-x-files-RJKSRBczXJQ3e">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/46f0tmfnYe0fK" width="392" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-gillian-anderson-46f0tmfnYe0fK">via GIPHY</a></p>'
         },
         {
             question: "What is the name of David Duchovny's character?",
-            answer: "Fox Mulder"
-        },
-        {
-            question: "What is the name of the actor who plays Dana Scully's character?",
-            answer: "Gillian Anderson"
+            rightAnswer: "Fox Mulder",
+            possibleAnswers: ["Cat Bolder", "Seeley Booth", "Agent Bert Macklin", "Fox Mulder"],
+            image: '<iframe src="https://giphy.com/embed/4ABqHGQIMZay4" width="309" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-mulder-scully-msr-4ABqHGQIMZay4">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/l0NwQm6rURw46Nccg" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-fox-tv-l0NwQm6rURw46Nccg">via GIPHY</a></p>'
         },
         {
             question: "What do some pople call Fox Mulder behind his back?",
-            answer: "Spooky Mulder"
+            rightAnswer: "Spooky Mulder",
+            possibleAnswers: ["Fatty Bolger", "Spooky Mulder", "Buffalo Bill", "Tall Tales Mulder"],
+            image: '<iframe src="https://giphy.com/embed/XUHaEglC894hq" width="480" height="332" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xfiles-scully-mulder-XUHaEglC894hq">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/EkZZ421XIrRe0" width="353" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-my-babies-EkZZ421XIrRe0">via GIPHY</a></p>'
         },
         {
-            question: "Who does the Smoking Man claims to have assasinated?",
-            answer: "JFK"
+            question: "What is the name of Gillian Anderson's character?",
+            rightAnswer: "Dana Scully",
+            possibleAnswers: ["Diana Bones", "Temperence Geller", "Dana Scully", "Clarice Starling"],
+            image: '<iframe src="https://giphy.com/embed/l0NwurhyqtwWLh6y4" width="480" height="267" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-fox-tv-l0NwurhyqtwWLh6y4">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/PmO1A8IcPP4EE" width="480" height="294" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/david-duchovny-mulder-PmO1A8IcPP4EE">via GIPHY</a></p>'
+        },
+        {
+            question: "Which character claims to have assasinated Jonh F. Kennedy?",
+            rightAnswer: "The Smoking Man",
+            possibleAnswers: ["Bill Mulder", "The Smoking Man", "Alex Krycek", "Walter Skinner"],
+            image: '<iframe src="https://giphy.com/embed/fbmAyiNeACwAU" width="480" height="353" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-xfiles-gifs-fbmAyiNeACwAU">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/pBGCireowMq0o" width="480" height="336" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reaction-gillian-anderson-judging-you-pBGCireowMq0o">via GIPHY</a></p>'
         },
         {
             question: "What is one of the names of the Lone Gunman trio?",
-            answer: "Frohicke"
+            rightAnswer: "Frohicke",
+            possibleAnswers: ["R.Swanson", "Frohicke", "Tom Bombadill", "Seeley"],
+            image: '<iframe src="https://giphy.com/embed/IR2llpxPTsGqs" width="480" height="357" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-x-files-gifs-IR2llpxPTsGqs">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/26gN2hokB0p4GfcEU" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/foxtv-the-x-files-scully-26gN2hokB0p4GfcEU">via GIPHY</a></p>'
         },
         {
-            question: "Which famous actor got their big break on X-Files?",
-            answer: "Shia LeBeouf"
+            question: "Which famous actor appeared on the X-Files?",
+            rightAnswer: "All of Them",
+            possibleAnswers: ["Shia LeBeouf", "Ryan Reynolds", "Jack Black", "All of Them"],
+            image: '<iframe src="https://giphy.com/embed/xT0BKwUZfmqWJ8xY2Y" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-xT0BKwUZfmqWJ8xY2Y">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/3o85xGvmQJ1QYfPgmk" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-3o85xGvmQJ1QYfPgmk">via GIPHY</a></p>'
         },
         {
-            question: "The character of Dana Scully was inspired by which character from Silence of the Lambs?",
-            answer: "Clarice Starling"
+            question: "Which univeristy did Fox Mulder graduate from before attending Quantico FBI Training Academy?",
+            rightAnswer: "University of Oxford",
+            possibleAnswers: ["Harvard University", "Massachusetts Institute of Technology", "University of Oxford", "University of Cambridge"],
+            image: '<iframe src="https://giphy.com/embed/l1J9x7u0iZjqQguUU" width="480" height="410" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/paleycenter-shrug-david-duchovny-l1J9x7u0iZjqQguUU">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/3oEdvcPNJJCBxquJz2" width="480" height="363" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-3oEdvcPNJJCBxquJz2">via GIPHY</a></p>'
         },
         {
-            question: "Who was once married to Tea Leoni?",
-            answer: "David Duchovny"
+            question: "What is missing from Mulder's apartment until season 6?",
+            rightAnswer: "Bed",
+            possibleAnswers: ["T.V.", "Bed", "Microwave", "Stove"],
+            image: '<iframe src="https://giphy.com/embed/dTOZledlBkPg4" width="480" height="258" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-the-fox-mulder-dTOZledlBkPg4">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/xTiTnrdatCmIKiF37G" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-xTiTnrdatCmIKiF37G">via GIPHY</a></p>'
         },
         {
-            question: "Which actor replaced Fox Mulder as male lead during the show's last seasons?",
-            answer: "Robert Patrick"
-        },
-
+            question: "Which episode happened?",
+            rightAnswer: "Scully becomes immortal after refusing to look death in the face.",
+            possibleAnswers: ["Scully becomes immortal after refusing to look death in the face.", "Mulder finds out he has a twin brother.", "Mulder and Scully meet aliens that take them to Mars on a vacation.", "Scully finds out that her dog is actually a robot spy placed by Smoking Man."],
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/l2JIaj14KNEWf5T8I" width="480" height="274" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-xfiles-l2JIaj14KNEWf5T8I">via GIPHY</a></p>',
+            wrongAnswerImage: '<iframe src="https://giphy.com/embed/41813ZE5pOHPq" width="480" height="272" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/chris-carter-triangle-50-ufos-41813ZE5pOHPq">via GIPHY</a></p>'
+        }
     ];
 
-    var $start = $('.start');
-    var $quiz = $('.quiz');
-    var $congratsBox = $('.congrats').hide();
-    var $sorryBox = $('.sorry').hide();
-    var $timesUpBox = $('.timesUp').hide();
-    var $timer = $('.timer');
-    var $kids = $('.parent').children().removeClass('.questions', '.choices', '.answer');
-
-    var $parent = $('#parent');
-
-    var $randomize = $('.choices');
-    var $answer = $('.answer');
-
+    // Audio/Background music
+    var audio = document.getElementById("xFilesThemeSongAudio");
     
-    function randomValue(array) {
-        return array[Math.floor(Math.random() * array.length)];
-    }
+    // Game Variables
+    var countdownStart = 10;
+    var triviaDiv = $("#quiz");
     
-    
-    // Not able to call function result
 
-    function result() {
-        var newQuestion = $question;
-        var wrong = randomValue(wrongAnswers);
-
-        function questionObj(question, answer) {
-
-            for (var i = 0; i < questionObj.length; i++) {
-                if (timer === 0) {
-                    $timesUpBox.show();
-                    this.answer.show();
-                    threeSecCounter();
-                    $timesUpBox.hide();
-                } else if (this.answer != questionObj.answer) {
-                    $sorryBox.show();
-                    this.answer.show();
-                    threeSecCounter();
-                    $sorryBox.hide();
-                } else {
-                    $congratsBox.show();
-                    threeSecCounter();
-                    $congratsBox.hide();
-
-                }
-
-                result();
-            }
-        }
-    }
-
-// Timers 
-    function tenSeconds() {
-        for (i = 10000; i < 10001; i++) {
-            if (i === 0) {
-                $timesUpBox.show();
-            } else {
-                $('#timer').append("<p>You have 10 seconds!</p>")
-            }
-        }
-
-    }
-
-    function threeSecCounter() {
-        for (i = 3000; i < 3001; i++) {
-            if (i === 0) {
-                result();
-            }
-        }
-    }
-
-
-
+    // Gives players the option to play or pause the audio
+    $('#playAudio').on('click', () => {
+        audio.play();
+    })
+    // or pause the audio
+    $('#pauseAudio').on('click', () => {
+        audio.pause();
+    })
 
 
 });
 
-
+// PseudoCode for Timed Quiz using jQuery
+// Welcome Screen with instructions and start button.
+// Show one question at a time, with 10 secs to answer
+// If correct, show congratulations div in form of gif or similar
+// If player runs out of time, tell them they have run out of time and display the correct answer.
+// If player choses incorrect answer, tell them they are wrong and display correct answer
+// After a 3 seconds, display the next question.
+// On the final screen show number of correct answers and number of wrong answers.
