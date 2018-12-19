@@ -83,11 +83,15 @@ $('#pauseAudio').on('click', () => {
 });
 
 
-// Game
+// Create Global Variables
 var landingDiv = $(".startDiv");
 var quizDiv = $("#quiz");
+// Variables for our timers
+var questionTimerStart = 11;
+var intervalId;
 
 
+// Create Game Object
 var game = {
     // Reference the triviaQuestions objects array.
     triviaQuestions: triviaQuestions,
@@ -95,6 +99,7 @@ var game = {
     totalQuestions: 10,
     // Start currentQuestion at 0.
     currentQuestion: 0,
+    
     loadQuestion: function () {
         // Show player the 'currentQuestion' 'question',
         quizDiv.html("<h2>" + triviaQuestions[this.currentQuestion].question + "</h2><hr>");
@@ -104,6 +109,24 @@ var game = {
             quizDiv.append("<button class='user-choice' data-name='" + triviaQuestions[this.currentQuestion].possibleAnswers[i] + "'>" + triviaQuestions[this.currentQuestion].possibleAnswers[i] + "</button>");
         }
     },
+
+    // Create function to give player only 10 seconds to answer each question.
+    tenSecondTimer: function () {
+        // Grab referenct to rightAnswer since it will be unavailable from global in the nested function.
+        var answer = triviaQuestions[this.currentQuestion].rightAnswer;
+        intervalId = setInterval(() => {
+            // Start timer.
+            questionTimerStart--;
+            // Show player the countdown.
+            $("#tenSecondTimer").html("<h2>" + questionTimerStart + "</h2>");
+            // When timer reaches 0, tell player time is up and show them the right answer.
+            if (questionTimerStart === 0) {
+                console.log("Times Up");
+                quizDiv.html("<h1>Time is Up!</h1><br><p>The correct answer was: "+ answer +"</p>");
+            }
+        }, 1000);
+    },
+
 
     // Keep track of player's correct and incorrect answers. 
     correct: 0,
@@ -128,13 +151,14 @@ var game = {
             // show player the wrongAnswerImage/Gif.
             quizDiv.append(triviaQuestions[this.currentQuestion].wrongAnswerImage);
         }
-    
-    }
+
+    },
 }
 
 $(document).on('click', '#startBtn', () => {
     landingDiv.hide();
     quizDiv.show();
+    game.tenSecondTimer();
     game.loadQuestion();
 });
 
