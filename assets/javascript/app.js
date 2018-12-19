@@ -3,63 +3,63 @@ var triviaQuestions = [{
         question: "Who created the X-Files?",
         possibleAnswers: ["Bryan Fuller", "J.J. Abrams", "Chris Carter", "Neil deGrasse Tyson"],
         rightAnswer: "Chris Carter",
-        rightAnswerimage: '<iframe src="https://giphy.com/embed/RJKSRBczXJQ3e" width="480" height="354" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/chris-carter-david-duchovny-the-x-files-RJKSRBczXJQ3e">via GIPHY</a></p>',
+        rightAnswerImage: '<iframe src="https://giphy.com/embed/RJKSRBczXJQ3e" width="480" height="354" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/chris-carter-david-duchovny-the-x-files-RJKSRBczXJQ3e">via GIPHY</a></p>',
         wrongAnswerImage: '<iframe src="https://giphy.com/embed/46f0tmfnYe0fK" width="392" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-gillian-anderson-46f0tmfnYe0fK">via GIPHY</a></p>'
     },
     {
         question: "What is the name of David Duchovny's character?",
         possibleAnswers: ["Cat Bolder", "Seeley Booth", "Agent Bert Macklin", "Fox Mulder"],
         rightAnswer: "Fox Mulder",
-        rightAnswerimage: '<iframe src="https://giphy.com/embed/4ABqHGQIMZay4" width="309" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-mulder-scully-msr-4ABqHGQIMZay4">via GIPHY</a></p>',
+        rightAnswerImage: '<iframe src="https://giphy.com/embed/4ABqHGQIMZay4" width="309" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-mulder-scully-msr-4ABqHGQIMZay4">via GIPHY</a></p>',
         wrongAnswerImage: '<iframe src="https://giphy.com/embed/l0NwQm6rURw46Nccg" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-fox-tv-l0NwQm6rURw46Nccg">via GIPHY</a></p>'
     },
     {
         question: "What do some pople call Fox Mulder behind his back?",
         possibleAnswers: ["Fatty Bolger", "Spooky Mulder", "Buffalo Bill", "Tall Tales Mulder"],
         rightAnswer: "Spooky Mulder",
-        rightAnswerimage: '<iframe src="https://giphy.com/embed/XUHaEglC894hq" width="480" height="332" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xfiles-scully-mulder-XUHaEglC894hq">via GIPHY</a></p>',
+        rightAnswerImage: '<iframe src="https://giphy.com/embed/XUHaEglC894hq" width="480" height="332" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xfiles-scully-mulder-XUHaEglC894hq">via GIPHY</a></p>',
         wrongAnswerImage: '<iframe src="https://giphy.com/embed/EkZZ421XIrRe0" width="353" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-my-babies-EkZZ421XIrRe0">via GIPHY</a></p>'
     },
     {
         question: "What is the name of Gillian Anderson's character?",
         possibleAnswers: ["Diana Bones", "Temperence Geller", "Dana Scully", "Clarice Starling"],
         rightAnswer: "Dana Scully",
-        rightAnswerimage: '<iframe src="https://giphy.com/embed/l0NwurhyqtwWLh6y4" width="480" height="267" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-fox-tv-l0NwurhyqtwWLh6y4">via GIPHY</a></p>',
+        rightAnswerImage: '<iframe src="https://giphy.com/embed/l0NwurhyqtwWLh6y4" width="480" height="267" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-fox-tv-l0NwurhyqtwWLh6y4">via GIPHY</a></p>',
         wrongAnswerImage: '<iframe src="https://giphy.com/embed/PmO1A8IcPP4EE" width="480" height="294" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/david-duchovny-mulder-PmO1A8IcPP4EE">via GIPHY</a></p>'
     },
     {
         question: "Which character claims to have assasinated Jonh F. Kennedy?",
         possibleAnswers: ["Bill Mulder", "The Smoking Man", "Alex Krycek", "Walter Skinner"],
         rightAnswer: "The Smoking Man",
-        rightAnswerimage: '<iframe src="https://giphy.com/embed/fbmAyiNeACwAU" width="480" height="353" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-xfiles-gifs-fbmAyiNeACwAU">via GIPHY</a></p>',
+        rightAnswerImage: '<iframe src="https://giphy.com/embed/fbmAyiNeACwAU" width="480" height="353" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-xfiles-gifs-fbmAyiNeACwAU">via GIPHY</a></p>',
         wrongAnswerImage: '<iframe src="https://giphy.com/embed/pBGCireowMq0o" width="480" height="336" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reaction-gillian-anderson-judging-you-pBGCireowMq0o">via GIPHY</a></p>'
     },
     {
         question: "What is one of the names of the Lone Gunman trio?",
         possibleAnswers: ["R.Swanson", "Frohicke", "Tom Bombadill", "Seeley"],
         rightAnswer: "Frohicke",
-        rightAnswerimage: '<iframe src="https://giphy.com/embed/IR2llpxPTsGqs" width="480" height="357" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-x-files-gifs-IR2llpxPTsGqs">via GIPHY</a></p>',
+        rightAnswerImage: '<iframe src="https://giphy.com/embed/IR2llpxPTsGqs" width="480" height="357" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-x-files-gifs-IR2llpxPTsGqs">via GIPHY</a></p>',
         wrongAnswerImage: '<iframe src="https://giphy.com/embed/26gN2hokB0p4GfcEU" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/foxtv-the-x-files-scully-26gN2hokB0p4GfcEU">via GIPHY</a></p>'
     },
     {
         question: "Which famous actor appeared on the X-Files?",
         possibleAnswers: ["Shia LeBeouf", "Ryan Reynolds", "Jack Black", "All of Them"],
         rightAnswer: "All of Them",
-        rightAnswerimage: '<iframe src="https://giphy.com/embed/xT0BKwUZfmqWJ8xY2Y" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-xT0BKwUZfmqWJ8xY2Y">via GIPHY</a></p>',
+        rightAnswerImage: '<iframe src="https://giphy.com/embed/xT0BKwUZfmqWJ8xY2Y" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-xT0BKwUZfmqWJ8xY2Y">via GIPHY</a></p>',
         wrongAnswerImage: '<iframe src="https://giphy.com/embed/3o85xGvmQJ1QYfPgmk" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-3o85xGvmQJ1QYfPgmk">via GIPHY</a></p>'
     },
     {
         question: "Which univeristy did Fox Mulder graduate from before attending Quantico FBI Training Academy?",
         possibleAnswers: ["Harvard University", "Massachusetts Institute of Technology", "University of Oxford", "University of Cambridge"],
         rightAnswer: "University of Oxford",
-        rightAnswerimage: '<iframe src="https://giphy.com/embed/l1J9x7u0iZjqQguUU" width="480" height="410" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/paleycenter-shrug-david-duchovny-l1J9x7u0iZjqQguUU">via GIPHY</a></p>',
+        rightAnswerImage: '<iframe src="https://giphy.com/embed/l1J9x7u0iZjqQguUU" width="480" height="410" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/paleycenter-shrug-david-duchovny-l1J9x7u0iZjqQguUU">via GIPHY</a></p>',
         wrongAnswerImage: '<iframe src="https://giphy.com/embed/3oEdvcPNJJCBxquJz2" width="480" height="363" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-3oEdvcPNJJCBxquJz2">via GIPHY</a></p>'
     },
     {
         question: "What is missing from Mulder's apartment until season 6?",
         possibleAnswers: ["T.V.", "Bed", "Microwave", "Stove"],
         rightAnswer: "Bed",
-        rightAnswerimage: '<iframe src="https://giphy.com/embed/dTOZledlBkPg4" width="480" height="258" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-the-fox-mulder-dTOZledlBkPg4">via GIPHY</a></p>',
+        rightAnswerImage: '<iframe src="https://giphy.com/embed/dTOZledlBkPg4" width="480" height="258" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-the-fox-mulder-dTOZledlBkPg4">via GIPHY</a></p>',
         wrongAnswerImage: '<iframe src="https://giphy.com/embed/xTiTnrdatCmIKiF37G" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-xTiTnrdatCmIKiF37G">via GIPHY</a></p>'
     },
     {
@@ -89,15 +89,23 @@ var quizDiv = $("#quiz");
 
 
 var game = {
+    // Reference the triviaQuestions objects array.
     triviaQuestions: triviaQuestions,
+    // Reference the number of triviaQuestion objects/questions.
+    totalQuestions: 10,
+    // Start currentQuestion at 0.
     currentQuestion: 0,
-
     loadQuestion: function () {
+        // Show player the 'currentQuestion' 'question',
         quizDiv.html("<h2>" + triviaQuestions[this.currentQuestion].question + "</h2><hr>");
+        // loop through the 'currentQuestion' 'possibleAnswers' array,
         for (var i = 0; i < triviaQuestions[this.currentQuestion].possibleAnswers.length; i++) {
-            quizDiv.append("<button>" + triviaQuestions[this.currentQuestion].possibleAnswers[i] + "</button>");
+            // and append each as a button with class='user-choice' and attribute of 'date-name='triviaQuestions[this.currentQuestion].possibleAnswers[i]'.
+            quizDiv.append("<button class='user-choice' data-name='" + triviaQuestions[this.currentQuestion].possibleAnswers[i] + "'>" + triviaQuestions[this.currentQuestion].possibleAnswers[i] + "</button>");
         }
     },
+
+
 }
 
 $(document).on('click', '#startBtn', () => {
@@ -105,6 +113,7 @@ $(document).on('click', '#startBtn', () => {
     quizDiv.show();
     game.loadQuestion();
 });
+
 
 
 
