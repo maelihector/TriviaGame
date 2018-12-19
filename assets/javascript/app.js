@@ -105,7 +105,31 @@ var game = {
         }
     },
 
+    // Keep track of player's correct and incorrect answers. 
+    correct: 0,
+    incorrect: 0,
+    playerAnswer: function (e) {
+        // If target of click event's 'data-name' attribute value === the rightAnswer,
+        if ($(e.target).attr('data-name') === triviaQuestions[this.currentQuestion].rightAnswer) {
+            // increment correct amount by 1,
+            this.correct++;
+            // tell player they are correct,
+            quizDiv.html("<p>Correct!</p>");
+            // show player the rightAnswerImage/Gif.
+            quizDiv.append(triviaQuestions[this.currentQuestion].rightAnswerImage);
 
+        }
+        // Else player is wrong,
+        else {
+            // increment incorrect amount by 1,
+            this.incorrect++;
+            // tell player thay got it wrong and show them the right answer,
+            quizDiv.html("<h1>Wrong Answer!</h1><br><p>The correct answer was: " + triviaQuestions[this.currentQuestion].rightAnswer + "</p>");
+            // show player the wrongAnswerImage/Gif.
+            quizDiv.append(triviaQuestions[this.currentQuestion].wrongAnswerImage);
+        }
+    
+    }
 }
 
 $(document).on('click', '#startBtn', () => {
@@ -114,7 +138,10 @@ $(document).on('click', '#startBtn', () => {
     game.loadQuestion();
 });
 
-
+// Reference each '.user-chice' element click event and call 'game.playerAnswer' function.
+$(document).on('click', '.user-choice', (e) => {
+    game.playerAnswer(e);
+});
 
 
 
