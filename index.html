@@ -17,48 +17,58 @@
     <audio id="xFilesThemeSongAudio">
         <source src="./assets/mp3/X-FilesTheme.mp3" type="audio/mpeg">
     </audio>
-    <button id="playAudio" type="button">Play Audio</button>
-    <button id="pauseAudio" type="button">Pause Audio</button>
+    <div class="audioBtns">
+        <button id="playAudio" type="button">Play Audio</button>
+        <button id="pauseAudio" type="button">Pause Audio</button>
+    </div>
 
     <div class="wrapper">
 
         <!-- Landing Page Div -->
-        <h1>X-Files Trivia!</h1>
-        <div class="startDiv">
-            <h2>Do you want to play?</h2>
-            <p>There are 10 questions total. You have 10 seconds to answer each question.
-            </p>
-            <button id="startBtn">Start Quiz</button>
-            <h2>Good Luck!</h2>
-        </div>
+        <header>
+            <h1>X-Files Trivia!</h1>
+        </header>
 
-        <!-- Current Timer -->
-        <h1 id="tenSecondTimer"></h1>
+        <main>
+            <div class="startDiv">
+                <h2>Do you want to play?</h2>
+                <p>There are 10 questions total. You have 10 seconds to answer each question.
+                </p>
+                <button id="startBtn">Start Quiz</button>
+                <h2>Good Luck!</h2>
+            </div>
 
-        <!-- Quiz Div will show once 'start' button is clicked. -->
-        <div class="quizDiv hidden" id="quiz">
+            <!-- Current Timer -->
+            <h1 id="tenSecondTimer"></h1>
+
+            <!-- Quiz Div will show once 'start' button is clicked. -->
+            <div class="quizDiv hidden" id="quiz">
 
 
 
-        </div>
-        <!-- The next three divs are ones that will show depending on which choice the user clicks on -->
-        <div class="congratsMessage hidden">
-            <hr>
-            <h2>You got it right!</h2>
-            <hr>
-            <div class="gifBox" id="rightAnswerGif"></div>
-        </div>
-        <div class="sorryMessage hidden">
-            <hr>
-            <h2>Wrong Answer!</h2>
-            <hr>
-            <div class="gifBox" id="wrongAnswerGif"></div>
+            </div>
+            <!-- The next three divs are ones that will show depending on which choice the user clicks on -->
+            <div class="congratsMessage hidden">
+                <hr>
+                <h2>You got it right!</h2>
+                <hr>
+                <div class="gifBox" id="rightAnswerGif"></div>
+            </div>
+            <div class="sorryMessage hidden">
+                <hr>
+                <h2>Wrong Answer!</h2>
+                <hr>
+                <div class="gifBox" id="wrongAnswerGif"></div>
 
-        </div>
-        <div class="timesUpMessage hidden" id="time-left">
+            </div>
+            <div class="timesUpMessage hidden" id="time-left">
 
-        </div>
+            </div>
+        </main>
     </div>
+    <footer>
+        Copyright &copy; Maeli Hector - All Rights Reserved
+    </footer>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

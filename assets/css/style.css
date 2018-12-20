@@ -29,14 +29,10 @@ body {
 
 .quizDiv,
 .startDiv,
-.timer-box 
-.timesUpMessage
-.sorryMessage
-.congratsMessage
-{
+.timer-box .timesUpMessage .sorryMessage .congratsMessage {
     padding: 10px;
     margin: 20px;
-    background-color: #31090996;
+    background-color: #310909e0;
     min-height: 300px;
 }
 
@@ -54,13 +50,25 @@ p {
 button {
     padding: 15px;
     margin: 15px;
-    background-color: #1e1b1b;
+    background-color: #2d0808ed;
     color: #ffffff;
     font-family: 'Wire One';
     font-size: 20px;
+    letter-spacing: 3px;
 }
 
 button:hover {
     color: rgb(134, 68, 68);
     background-color: #180101;
+}
+
+.audioBtns {
+    text-align: center;
+}
+
+footer {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 25px;
 }
