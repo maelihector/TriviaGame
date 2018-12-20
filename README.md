@@ -12,18 +12,21 @@ There are a total of ten questions.
 
 The player has ten seconds to answer each question or it is counted as incorrect.
 
-There is a three second delay after each  question is answered to ready the player for the next question, and of course to enjoy the awesome gif provided.
+There is a three second delay after each  question is answered to ready the player for the next question, and of course to enjoy the awesome gifs provided by  [Giphy](https://github.com/Giphy).
 
-After all ten questions have been answered the player is given their score with an option to re-play by clicking on a button.
+ After all ten questions have been answered the player is given their score with an option to re-play by clicking on a button.
 
 ## Technologies Used
 
-1. HTML
-2. Vanilla CSS
-3. JavaScript
-4. jQuery
-
+ 1. HTML
+ 2. Vanilla CSS
+ 3. JavaScript
+ 4. jQuery
+ 
 ## Credits
-Reset CSS by [Meyerweb](http://meyerweb.com/eric/tools/css/reset/)
 
-Written with [StackEdit](https://stackedit.io/).
+- Gifs from [Giphy](https://github.com/Giphy)
+
+- Reset CSS by [Meyerweb](http://meyerweb.com/eric/tools/css/reset/)
+
+- This README was written with [StackEdit](https://stackedit.io/)
