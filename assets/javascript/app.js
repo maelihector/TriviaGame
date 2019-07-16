@@ -21,7 +21,7 @@ var triviaQuestions = [{
     possibleAnswers: ["Fatty Bolger", "Spooky Mulder", "Buffalo Bill", "Tall Tales Mulder"],
     rightAnswer: "Spooky Mulder",
     rightAnswerImage: '<iframe src="https://giphy.com/embed/XUHaEglC894hq" width="253" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xfiles-scully-mulder-XUHaEglC894hq">via GIPHY</a></p>',
-    wrongAnswerImage: '<iframe src="https://giphy.com/embed/EkZZ421XIrRe0" width="92" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-my-babies-EkZZ421XIrRe0">via GIPHY</a></p>'
+    wrongAnswerImage: '<iframe src="https://giphy.com/embed/12T7zqYs8zIn7y" width="231" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-x-files-xfiles-12T7zqYs8zIn7y">via GIPHY</a></p>'
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ var triviaQuestions = [{
     possibleAnswers: ["Diana Bones", "Temperence Geller", "Dana Scully", "Clarice Starling"],
     rightAnswer: "Dana Scully",
     rightAnswerImage: '<iframe src="https://giphy.com/embed/l0NwurhyqtwWLh6y4" width="315" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-fox-tv-l0NwurhyqtwWLh6y4">via GIPHY</a></p>',
-    wrongAnswerImage: '<iframe src="https://giphy.com/embed/PmO1A8IcPP4EE" width="213" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/david-duchovny-mulder-PmO1A8IcPP4EE">via GIPHY</a></p>'
+    wrongAnswerImage: '<iframe src="https://giphy.com/embed/3ohhwrDbQrPihOOJk4" width="196" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/paleycenter-gillian-anderson-dana-scully-3ohhwrDbQrPihOOJk4">via GIPHY</a></p>'
   },
   {
     id: 5,
@@ -76,8 +76,8 @@ var triviaQuestions = [{
     question: "Which episode happened?",
     possibleAnswers: ["Scully becomes immortal.", "Aliens take Mulder and Scully to Mars.", "Scully finds out that her dog is a spy robot."],
     rightAnswer: "Scully becomes immortal.",
-    rightAnswerImage: '<iframe src="https://giphy.com/embed/l2JIaj14KNEWf5T8I" width="307" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-xfiles-l2JIaj14KNEWf5T8I">via GIPHY</a></p>',
-    wrongAnswerImage: '<iframe src="https://giphy.com/embed/41813ZE5pOHPq" width="309" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/chris-carter-triangle-50-ufos-41813ZE5pOHPq">via GIPHY</a></p>'
+    rightAnswerImage: '<iframe src="https://giphy.com/embed/l2SpVBS80rurCwtzi" width="255" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hulu-the-x-files-fox-television-classics-l2SpVBS80rurCwtzi">via GIPHY</a></p>',
+    wrongAnswerImage: '<iframe src="https://giphy.com/embed/l2JIaj14KNEWf5T8I" width="307" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-xfiles-l2JIaj14KNEWf5T8I">via GIPHY</a></p>'
   }
 ];
 
