@@ -1,4 +1,4 @@
-// Trivia questions set
+// Trivia questions objects array
 var triviaQuestions = [{
     id: 1,
     question: "Who created the X-Files?",
@@ -81,28 +81,28 @@ var triviaQuestions = [{
   }
 ];
 
-
-// Create Global Variables
+// Global Variables
 var landingDiv = $(".startDiv");
 var quizDiv = $("#quiz");
-// Variables for our timers
 var intervalId;
 var threeSecondDelay;
 
-
-// Create Game Object
+// Game Object
 var game = {
-  // Reference the triviaQuestions objects array.
+
+  // Reference the trivia questions objects array
   triviaQuestions: triviaQuestions,
 
-  // Start currentQuestion at 0.
+  // Start current question and number of games played at 0
   currentQuestion: 0,
-
-  // Keep track of game scores in an array.
-  gamesPlayedScores: [],
   numberGamesPlayed: 0,
 
+  // Keep track of game scores in an array
+  gamesPlayedScores: [],
+
+  // Method that loads questions
   loadQuestion: function () {
+    // If all trivia questions have been asked
     if (this.currentQuestion === 10) {
       clearInterval(intervalId);
       this.numberGamesPlayed++;
@@ -111,41 +111,44 @@ var game = {
       quizDiv.append("<h1>" + game.gamesPlayedScores + "</h1>");
       quizDiv.append("<hr><button id='startBtn'>Retake Quiz</button>");
     } else {
+      // Else start that 10 second timer
       this.tenSecondTimer();
-      // Show player the 'currentQuestion' 'question',
+      // Show player the current question
       quizDiv.html("<h2>" + triviaQuestions[this.currentQuestion].question + "</h2><hr>");
-      // loop through the 'currentQuestion' 'possibleAnswers' array,
+      // Loop through the current question's possible answers and append the answer to it
       for (var i = 0; i < triviaQuestions[this.currentQuestion].possibleAnswers.length; i++) {
-        // and append each as a button with class='user-choice' and attribute of 'date-name='triviaQuestions[this.currentQuestion].possibleAnswers[i]'.
         quizDiv.append("<button class='user-choice' data-name='" + triviaQuestions[this.currentQuestion].possibleAnswers[i] + "'>" + triviaQuestions[this.currentQuestion].possibleAnswers[i] + "</button>");
       }
+      // Update question count
       quizDiv.append("<h1> Question " + triviaQuestions[this.currentQuestion].id + " of 10</h1>")
     }
   },
 
-  // Create function to give player only 10 seconds to answer each question.
+  // Method to give player only 10 seconds to answer each question
   tenSecondTimer: function () {
     clearInterval(intervalId);
-    // Grab referenct to rightAnswer since it will be unavailable from global in the nested function.
+    // Grab reference to rightAnswer since it will be unavailable from global in the nested function.
     var answer = triviaQuestions[this.currentQuestion].rightAnswer;
 
     // Start timer at 10
     var questionTimerStart = 10;
+    // Show timer on the DOM
     $("#tenSecondTimer").html("<h2>" + questionTimerStart + "</h2>");
 
     intervalId = setInterval(() => {
-      // Start decrementing timer.
+      // Start decrementing timer
       questionTimerStart--;
-      // Show player the timer.
+      // Show timer on the DOM while time is running
       if (questionTimerStart > 0) {
         $("#tenSecondTimer").html("<h2>" + questionTimerStart + "</h2>");
+        // If time runs out, count as incorrect
       } else if (questionTimerStart === 0) {
-        // count answer as incorrect,   
         this.incorrect--;
-        // and show the right answer.
+        // Show right answer on the DOM with accompanying gif
         quizDiv.html("<h1>Time is Up!</h1><br><p>The correct answer was: " + answer + "</p>");
         quizDiv.append(triviaQuestions[this.currentQuestion].wrongAnswerImage);
         quizDiv.append("<div height='50px'></div>");
+        // Reset time on the DOM
         $("#tenSecondTimer").html("<h2>" + 0 + "</h2>");
 
       }
@@ -159,60 +162,58 @@ var game = {
     }, 1000);
   },
 
-
-  // Keep track of player's correct and incorrect answers. 
+  // Keep track of player's correct and incorrect answers
   correct: 0,
   incorrect: 0,
+
+  // Method that gets answer from player
   playerAnswer: function (e) {
     clearInterval(intervalId);
-    // If target of click event's 'data-name' attribute value === the rightAnswer,
+    // If target of click event's 'data-name' attribute value === the rightAnswer increment correct amount by 1
     if ($(e.target).attr('data-name') === triviaQuestions[this.currentQuestion].rightAnswer) {
-      // increment correct amount by 1,
       this.correct++;
-      // tell player they are correct,
+      // Tell player they are correct
       quizDiv.html("<p>Correct!</p>");
-      // show player the rightAnswerImage/Gif.
+      // Show right answer gif on the DOM
       quizDiv.append(triviaQuestions[this.currentQuestion].rightAnswerImage);
       quizDiv.append("<div height='50px'></div>");
 
       this.currentQuestion++;
     }
-    // Else player is wrong,
+    // Else player is wrong, and increment incorrect amount by 1
     else {
-      // increment incorrect amount by 1,
       this.incorrect++;
-      // tell player thay got it wrong and show them the right answer,
+      // Show player they were wrong on the DOM with accompanying gif
       quizDiv.html("<h1>Wrong Answer!</h1><br><p>The correct answer was: " + triviaQuestions[this.currentQuestion].rightAnswer + "</p>");
-      // show player the wrongAnswerImage/Gif.
       quizDiv.append(triviaQuestions[this.currentQuestion].wrongAnswerImage);
       quizDiv.append("<div height='50px'></div>");
       this.currentQuestion++;
 
     }
-    // Wait 4 seconds after answer has been clicked before loading the next question.
+    // Wait three seconds after answer has been clicked before loading the next question.
     threeSecondDelay = setTimeout(function () {
       game.loadQuestion();
     }, 3000);
 
   },
 
+  // Method that resets whole game
   resetGame: function () {
     this.currentQuestion = 0;
     this.correct = 0;
     this.incorrect = 0;
-
     this.loadQuestion();
   }
 }
 
+// Click event to start a game
 $(document).on('click', '#startBtn', () => {
   landingDiv.hide();
   quizDiv.show();
   game.resetGame();
 });
 
-
-// Reference each '.user-chice' element click event and call 'game.playerAnswer' function.
+// Click event for when a player chooses a trivia answer
 $(document).on('click', '.user-choice', (e) => {
   game.playerAnswer(e);
 });
@@ -223,22 +224,10 @@ $(document).on('click', '#startBtn', () => {
   audio.play();
 });
 
-// Gives players the option to play or pause the audio
+// Give players the option to play or pause the audio
 $('#playAudio').on('click', () => {
   audio.play();
 });
-// or pause the audio
 $('#pauseAudio').on('click', () => {
   audio.pause();
 });
-
-
-
-// PseudoCode for Timed Quiz using jQuery
-// Welcome Screen with instructions and start button.
-// Show one question at a time, with 10 secs to answer
-// If correct, show congratulations div in form of gif or similar
-// If player runs out of time, tell them they have run out of time and display the correct answer.
-// If player choses incorrect answer, tell them they are wrong and display correct answer
-// After a 3 seconds, display the next question.
-// On the final screen show number of correct answers and number of wrong answers
