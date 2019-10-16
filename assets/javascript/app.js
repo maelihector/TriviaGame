@@ -107,6 +107,7 @@ $(document).ready(function () {
 
     // Method that loads questions
     loadQuestion: function () {
+      quizDiv.css("color", "#fff");
       // If all trivia questions have been asked
       if (this.currentQuestion === 10) {
         clearInterval(intervalId);
@@ -149,6 +150,7 @@ $(document).ready(function () {
           // If time runs out, count as incorrect
         } else if (questionTimerStart === 0) {
           this.incorrect--;
+          quizDiv.css("color", "#ff0000e8");
           // Show right answer on the DOM with accompanying gif
           quizDiv.html("<h1>Time is Up!</h1><br><p>The correct answer was: " + answer + "</p>");
           quizDiv.append(triviaQuestions[game.currentQuestion].wrongAnswerImage);
@@ -186,6 +188,7 @@ $(document).ready(function () {
         this.incorrect++;
         // Show player they were wrong on the DOM with accompanying gif
         quizDiv.html("<h1>Wrong Answer!</h1><br><p>The correct answer was: " + triviaQuestions[this.currentQuestion].rightAnswer + "</p>");
+        quizDiv.css("color", "#ff0000e8");
         quizDiv.append(triviaQuestions[this.currentQuestion].wrongAnswerImage);
         quizDiv.append("<div height='50px'></div>");
         this.currentQuestion++;
