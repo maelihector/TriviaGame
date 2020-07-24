@@ -6,15 +6,15 @@ $(document).ready(function () {
       question: "Who created the X-Files?",
       possibleAnswers: ["Bryan Fuller", "J.J. Abrams", "Chris Carter", "Neil deGrasse Tyson"],
       rightAnswer: "Chris Carter",
-      rightAnswerImage: '<iframe src="https://giphy.com/embed/RJKSRBczXJQ3e" width="237" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/chris-carter-david-duchovny-the-x-files-RJKSRBczXJQ3e">via GIPHY</a></p>',
-      wrongAnswerImage: '<iframe src="https://giphy.com/embed/46f0tmfnYe0fK" width="143" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-gillian-anderson-46f0tmfnYe0fK">via GIPHY</a></p>'
+      rightAnswerImage: '<iframe src="https://giphy.com/embed/l41lUZGnCzLErXevK" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-l41lUZGnCzLErXevK">via GIPHY</a></p>',
+      wrongAnswerImage: '<iframe src="https://giphy.com/embed/3o85xszYjodRIMeJPy" width="480" height="363" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-3o85xszYjodRIMeJPy">via GIPHY</a></p>'
     },
     {
       id: 2,
       question: "What is the name of David Duchovny's character?",
       possibleAnswers: ["Cat Bolder", "Seeley Booth", "Agent Bert Macklin", "Fox Mulder"],
       rightAnswer: "Fox Mulder",
-      rightAnswerImage: '<iframe src="https://giphy.com/embed/4ABqHGQIMZay4" width="113" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-mulder-scully-msr-4ABqHGQIMZay4">via GIPHY</a></p>',
+      rightAnswerImage: '<iframe src="https://giphy.com/embed/xT0BKzsRhhgeNy29yM" width="480" height="267" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-xT0BKzsRhhgeNy29yM">via GIPHY</a></p>',
       wrongAnswerImage: '<iframe src="https://giphy.com/embed/l0NwQm6rURw46Nccg" width="262" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-fox-tv-l0NwQm6rURw46Nccg">via GIPHY</a></p>'
     },
     {
@@ -22,8 +22,8 @@ $(document).ready(function () {
       question: "What do some pople call Fox Mulder behind his back?",
       possibleAnswers: ["Fatty Bolger", "Spooky Mulder", "Buffalo Bill", "Tall Tales Mulder"],
       rightAnswer: "Spooky Mulder",
-      rightAnswerImage: '<iframe src="https://giphy.com/embed/XUHaEglC894hq" width="253" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xfiles-scully-mulder-XUHaEglC894hq">via GIPHY</a></p>',
-      wrongAnswerImage: '<iframe src="https://giphy.com/embed/12T7zqYs8zIn7y" width="231" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-x-files-xfiles-12T7zqYs8zIn7y">via GIPHY</a></p>'
+      rightAnswerImage: '<iframe src="https://giphy.com/embed/26hlSREy00jSmIRWw" width="480" height="356" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/david-duchovny-xfiles-jamming-26hlSREy00jSmIRWw">via GIPHY</a></p>',
+      wrongAnswerImage: '<iframe src="https://giphy.com/embed/2Yb1rvMnPJ9k67QXyF" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-foxtv-scully-2Yb1rvMnPJ9k67QXyF">via GIPHY</a></p>'
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ $(document).ready(function () {
       question: "Which character claims to have assasinated Jonh F. Kennedy?",
       possibleAnswers: ["Bill Mulder", "The Smoking Man", "Alex Krycek", "Walter Skinner"],
       rightAnswer: "The Smoking Man",
-      rightAnswerImage: '<iframe src="https://giphy.com/embed/fbmAyiNeACwAU" width="332" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-xfiles-gifs-fbmAyiNeACwAU">via GIPHY</a></p>',
+      rightAnswerImage: '<iframe src="https://giphy.com/embed/xT0BKpr1lrYdvzkH9S" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-x-files-the-x-files-xT0BKpr1lrYdvzkH9S">via GIPHY</a></p>',
       wrongAnswerImage: '<iframe src="https://giphy.com/embed/l0Nwv0XodQMQguNUs" width="262" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-the-x-files-fox-tv-l0Nwv0XodQMQguNUs">via GIPHY</a></p>'
     },
     {
@@ -46,7 +46,7 @@ $(document).ready(function () {
       question: "What is one of the names of the Lone Gunman trio?",
       possibleAnswers: ["Ron Swanson", "Frohicke", "Tom Bombadill", "Seeley"],
       rightAnswer: "Frohicke",
-      rightAnswerImage: '<iframe src="https://giphy.com/embed/IR2llpxPTsGqs" width="235" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-x-files-gifs-IR2llpxPTsGqs">via GIPHY</a></p>',
+      rightAnswerImage: '<iframe src="https://giphy.com/embed/l0NwqRhNXKhdGodGw" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-the-x-files-fox-tv-l0NwqRhNXKhdGodGw">via GIPHY</a></p>',
       wrongAnswerImage: '<iframe src="https://giphy.com/embed/26gN2hokB0p4GfcEU" width="311" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/foxtv-the-x-files-scully-26gN2hokB0p4GfcEU">via GIPHY</a></p>'
     },
     {
@@ -70,7 +70,7 @@ $(document).ready(function () {
       question: "What is missing from Mulder's apartment until season 6?",
       possibleAnswers: ["T.V.", "Bed", "Microwave", "Stove"],
       rightAnswer: "Bed",
-      rightAnswerImage: '<iframe src="https://giphy.com/embed/dTOZledlBkPg4" width="326" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/x-files-the-fox-mulder-dTOZledlBkPg4">via GIPHY</a></p>',
+      rightAnswerImage: '<iframe src="https://giphy.com/embed/l2SqfRIaRZrRsNJa8" width="480" height="330" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hulu-the-x-files-fox-television-classics-l2SqfRIaRZrRsNJa8">via GIPHY</a></p>',
       wrongAnswerImage: '<iframe src="https://giphy.com/embed/xTiTnrdatCmIKiF37G" width="230" height="175" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-xTiTnrdatCmIKiF37G">via GIPHY</a></p>'
     },
     {
